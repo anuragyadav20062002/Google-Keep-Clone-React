@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
 import CreateNote from "./Components/CreateNote"
+import Note from "./Components/Note"
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <Footer />
       <CreateNote />
+      <Note />
     </>
   )
 }
