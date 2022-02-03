@@ -13,6 +13,14 @@ const App = () => {
     })
   }
 
+  const onDelete = (id) => {
+    setAddItem((oldData) =>
+      oldData.filter((currData, index) => {
+        return index !== id
+      })
+    )
+  }
+
   return (
     <>
       <Header />
@@ -25,6 +33,7 @@ const App = () => {
             id={index}
             title={val.title}
             content={val.content}
+            deleteItem={onDelete}
           />
         )
       })}
