@@ -4,7 +4,7 @@ import Button from "@mui/material/Button"
 import AddIcon from "@mui/icons-material/Add"
 import { useState } from "react"
 
-const CreateNote = () => {
+const CreateNote = (props) => {
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -21,6 +21,9 @@ const CreateNote = () => {
         //checks if the name of field matches that in usestate the value is updated in usestate variable
       }
     })
+  }
+  const addEvent = () => {
+    props.passNote(note)
   }
   return (
     <>
@@ -42,7 +45,7 @@ const CreateNote = () => {
             onChange={inputEvent}
             placeholder="Write a note"
           ></textarea>
-          <Button>
+          <Button onClick={addEvent}>
             <AddIcon className="plus_sign" />
           </Button>
         </form>
