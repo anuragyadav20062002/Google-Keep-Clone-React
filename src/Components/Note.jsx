@@ -1,13 +1,13 @@
 import React from "react"
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline"
 
-const Note = () => {
+const Note = (props) => {
   return (
     <>
       <div className="note">
-        <h1>Title</h1>
+        <h1>{props.title}</h1>
         <br />
-        <p>This is the content</p>
+        <p>{props.content}</p>
         <button className="btn">
           <DeleteOutlineIcon className="deleteIcon" />
         </button>
